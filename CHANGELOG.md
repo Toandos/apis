@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.2](https://github.com/Toandos/apis/compare/v1.1.1...v1.1.2) (2026-09-23)
+
+
+### Bug Fixes
+
+* **cd:** Missing npm ci parameter ([4b837e8](https://github.com/Toandos/apis/commit/4b837e894e73bcc55dea4f2f9e36c626d16ba6d4))
+
 ## [1.1.1](https://github.com/Toandos/apis/compare/v1.1.0...v1.1.1) (2026-09-23)
 
 
