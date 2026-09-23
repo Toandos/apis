@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/Toandos/apis/compare/v1.0.0...v1.1.0) (2026-09-23)
+
+
+### Features
+
+* **cd:** Disable go and publish build artifact ([0e0ab43](https://github.com/Toandos/apis/commit/0e0ab43fd6fc8e7861f133a592dca8dd47f35ab6))
+
 ## 1.0.0 (2026-09-22)
 
 
