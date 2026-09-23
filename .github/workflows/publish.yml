@@ -44,5 +44,5 @@ jobs:
           registry-url: https://registry.npmjs.org
           package-manager-cache: false
 
-      - run: npm version ${{ inputs.version }}
+      - run: npm version ${{ inputs.version }} --no-git-tag-version
       - run: npm publish --access public
