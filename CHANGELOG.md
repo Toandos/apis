@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.3](https://github.com/Toandos/apis/compare/v1.1.2...v1.1.3) (2026-09-23)
+
+
+### Bug Fixes
+
+* **ts:** package.json missing wildcard ([dc0fac2](https://github.com/Toandos/apis/commit/dc0fac207ff31a6fb827f1684fa9cda7fef31a17))
+
 ## [1.1.2](https://github.com/Toandos/apis/compare/v1.1.1...v1.1.2) (2026-09-23)
 
 
