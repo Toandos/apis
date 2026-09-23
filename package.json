@@ -7,7 +7,7 @@
     "generated/ts/toando"
   ],
   "exports": {
-    "./*": "./generated/ts/toando"
+    "./*": "./generated/ts/toando/*"
   },
   "repository": {
     "type": "git",
