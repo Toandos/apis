@@ -1,6 +1,6 @@
 {
   "name": "@toando/apis",
-  "version": "1.0.3",
+  "version": "1.0.0",
   "description": "Api definitions for interacting with toando products",
   "type": "module",
   "files": [
