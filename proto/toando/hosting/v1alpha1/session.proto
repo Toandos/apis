@@ -1,0 +1,33 @@
+syntax = "proto3";
+
+package toando.hosting.v1alpha1;
+
+option go_package = "api.toando.de/go/hosting/v1alpha1;hostingv1alpha1";
+
+service SessionService {
+    rpc CreateSession(CreateSessionRequest) returns (Session);
+    rpc GetSession(GetSessionRequest) returns (Session);
+    rpc AuthorizeSession(AuthorizeSessionRequest) returns (Session);
+}
+
+message Session {
+    enum SessionState {
+        SESSION_STATE_UNSPECIFIED = 0;
+        SESSION_STATE_ANONYMOUS = 1;
+        SESSION_STATE_AUTHENTICATED = 2;
+    }
+
+    string id = 1;
+    string state = 2;
+}
+
+message CreateSessionRequest {}
+
+message GetSessionRequest {
+    string session_id = 1;
+}
+
+message AuthorizeSessionRequest {
+    string session_id = 1;
+    string oidc_authorization_code = 2;
+}
