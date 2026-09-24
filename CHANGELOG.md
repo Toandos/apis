@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/Toandos/apis/compare/v1.1.3...v1.2.0) (2026-09-24)
+
+
+### Features
+
+* **books:** Add session service & book rpcs ([d9ff24d](https://github.com/Toandos/apis/commit/d9ff24d87bd19e6fd0ee8c0cf0e723ab422931d8))
+
 ## [1.1.3](https://github.com/Toandos/apis/compare/v1.1.2...v1.1.3) (2026-09-23)
 
 
