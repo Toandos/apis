@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.0](https://github.com/Toandos/apis/compare/v1.3.0...v1.4.0) (2026-09-25)
+
+
+### Features
+
+* Update session services to use tokens for authentication ([1286a5b](https://github.com/Toandos/apis/commit/1286a5b1edb3d82d43b3fa686f9bd89c9cffd4a3))
+
 ## [1.3.0](https://github.com/Toandos/apis/compare/v1.2.0...v1.3.0) (2026-09-24)
 
 
