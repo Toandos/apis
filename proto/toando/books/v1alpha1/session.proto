@@ -5,23 +5,22 @@ package toando.books.v1alpha1;
 option go_package = "api.toando.de/go/books/v1alpha1;booksv1alpha1";
 
 service SessionService {
-    rpc CreateSession(CreateSessionRequest) returns (CreateSessionResponse);
+    rpc CreateAnonymousSession(CreateAnonymousSessionRequest) returns (CreateSessionResponse);
+    rpc CreateAuthenticatedSession(CreateAuthenticatedSessionRequest) returns (CreateSessionResponse);
     rpc GetSession(GetSessionRequest) returns (Session);
-    rpc Authenticate(AuthenticateRequest) returns (Session);
-}
-
-enum SessionState {
-    SESSION_STATE_UNSPECIFIED = 0;
-    SESSION_STATE_ANONYMOUS = 1;
-    SESSION_STATE_AUTHENTICATED = 2;
 }
 
 message Session {
     string id = 1;
-    SessionState state = 2;
+    optional string identity_id = 2;
 }
 
-message CreateSessionRequest {}
+message CreateAnonymousSessionRequest {}
+
+message CreateAuthenticatedSessionRequest {
+    string anonymous_session_id = 1; 
+    string oidc_authorization_code = 2;
+}
 
 message CreateSessionResponse {
     string token = 1;
@@ -30,9 +29,4 @@ message CreateSessionResponse {
 
 message GetSessionRequest {
     string token = 1;
-}
-
-message AuthenticateRequest {
-    string token = 1;
-    string oidc_authorization_code = 2;
 }
