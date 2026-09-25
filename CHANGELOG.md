@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.0](https://github.com/Toandos/apis/compare/v1.2.0...v1.3.0) (2026-09-24)
+
+
+### Features
+
+* **hosting:** Add first APIs ([d40ddf9](https://github.com/Toandos/apis/commit/d40ddf90dddcba7256844b6f43b850bd6e77c335))
+
 ## [1.2.0](https://github.com/Toandos/apis/compare/v1.1.3...v1.2.0) (2026-09-24)
 
 
