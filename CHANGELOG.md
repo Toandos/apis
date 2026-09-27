@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.6.0](https://github.com/Toandos/apis/compare/v1.5.0...v1.6.0) (2026-09-27)
+
+
+### Features
+
+* Add go package & reorganize ([1c8b3b2](https://github.com/Toandos/apis/commit/1c8b3b2ddf1054c22d99c18f83ad29769db0c69a))
+
 ## [1.5.0](https://github.com/Toandos/apis/compare/v1.4.0...v1.5.0) (2026-09-25)
 
 
