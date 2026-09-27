@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.6.2](https://github.com/Toandos/apis/compare/v1.6.1...v1.6.2) (2026-09-27)
+
+
+### Bug Fixes
+
+* **cd:** Copy to wrong directory ([c409489](https://github.com/Toandos/apis/commit/c40948968092c75beac6f7be47487d3ef18a4dfa))
+
 ## [1.6.1](https://github.com/Toandos/apis/compare/v1.6.0...v1.6.1) (2026-09-27)
 
 
