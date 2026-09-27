@@ -30,6 +30,7 @@ jobs:
     uses: ./.github/workflows/publish.yml
     with:
       version: ${{ needs.release.outputs.version }}
+    secrets: inherit
     permissions:
       contents: read
       id-token: write
