@@ -65,6 +65,7 @@ jobs:
           if git diff --staged --quiet; then
             echo "No changes to commit."
           else
-            git commit -m "Update generated code (applied by parent repository)"
-            git push origin main
+            git commit -m "Update generated code to v${{ inputs.version }} (applied by parent repo)"
+            git tag -a v${{ inputs.version }} -m "Release v${{ inputs.version }}"
+            git push origin main --follow-tags
           fi
