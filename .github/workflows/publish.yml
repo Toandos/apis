@@ -12,37 +12,59 @@ permissions:
   id-token: write
 
 jobs:
-  build:
+  ts:
     runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        working-directory: ./packages/ts
 
     steps:
       - uses: actions/checkout@v4
       - uses: bufbuild/buf-action@v1
         with:
           setup_only: true
-      - run: buf generate --error-format github-actions
-      - uses: actions/upload-artifact@v7
-        with:
-          name: generated
-          path: generated
-
-  publish-npm:
-    needs: build
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/checkout@v4
-
-      - uses: actions/download-artifact@v8
-        with:
-          name: generated
-          path: generated
-
       - uses: actions/setup-node@v7
         with:
           node-version: 24
           registry-url: https://registry.npmjs.org
           package-manager-cache: false
 
+      - run: buf generate --error-format github-actions
       - run: npm version ${{ inputs.version }} --no-git-tag-version
       - run: npm publish --access public
+
+  go:
+    runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        working-directory: source-repo/packages/go
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: source-repo
+      - uses: actions/checkout@v4
+        with:
+          repository: 'Toandos/apis-go'
+          token: ${{ secrets.GO_REPOSITORY_PAT }}
+          path: target-repo
+      - uses: bufbuild/buf-action@v1
+        with:
+          setup_only: true
+
+      - run: buf generate --error-format github-actions
+      - run: cp -r . target-repo/
+
+      - run: |
+          cd target-repo
+          git config user.name "${{ github.actor }}"
+          git config user.email "${{ github.actor_id }}+${{ github.actor }}@users.noreply.github.com"
+          git add .
+          if git diff --staged --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "Update generated code (applied by parent repository)"
+            git push origin main
+          fi

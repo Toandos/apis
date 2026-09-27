@@ -4,10 +4,10 @@
   "description": "Api definitions for interacting with toando products",
   "type": "module",
   "files": [
-    "generated/ts/toando"
+    "generated/toando"
   ],
   "exports": {
-    "./*": "./generated/ts/toando/*"
+    "./*": "./generated/toando/*"
   },
   "repository": {
     "type": "git",
