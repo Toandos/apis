@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.5.0](https://github.com/Toandos/apis/compare/v1.4.0...v1.5.0) (2026-09-25)
+
+
+### Features
+
+* Update session services for Session Fixation Mitigation ([ef5b964](https://github.com/Toandos/apis/commit/ef5b9645b94c97ce041e9eabeec78166a13a59a6))
+
 ## [1.4.0](https://github.com/Toandos/apis/compare/v1.3.0...v1.4.0) (2026-09-25)
 
 
