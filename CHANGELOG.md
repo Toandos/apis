@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.6.3](https://github.com/Toandos/apis/compare/v1.6.2...v1.6.3) (2026-09-27)
+
+
+### Bug Fixes
+
+* **cd:** Apply go version tags ([85a9b8a](https://github.com/Toandos/apis/commit/85a9b8ad31fc9f39ccb8614680156c36e91b0a03))
+
 ## [1.6.2](https://github.com/Toandos/apis/compare/v1.6.1...v1.6.2) (2026-09-27)
 
 
