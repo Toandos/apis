@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.6.1](https://github.com/Toandos/apis/compare/v1.6.0...v1.6.1) (2026-09-27)
+
+
+### Bug Fixes
+
+* **cd:** Missing token secret ([e0dddec](https://github.com/Toandos/apis/commit/e0dddec827c70bf753b9a33432fc57e9fbd4373c))
+
 ## [1.6.0](https://github.com/Toandos/apis/compare/v1.5.0...v1.6.0) (2026-09-27)
 
 
